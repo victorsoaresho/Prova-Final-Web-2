@@ -1,0 +1,147 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: "Comic Sans MS";
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-background {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%; 
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+}
+
+#app {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-container {
+    background-color: rgba(0, 0, 0, 0.815);
+    box-shadow: 1px 1px 6px 0 rgba(132,146,166,.3);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+h1.rick-and-morty-font {
+    font-family: 'Permanent Marker', cursive;
+    font-weight: bolder;
+    font-size: 2.5em;
+    color: #00b4d8; 
+    text-shadow: 2px 2px 4px #000000;
+    margin: 10px 0;
+}
+
+p {
+    text-align: center;
+    margin: 10px 0;
+}
+
+input[type="text"] {
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    width: 80%;
+    margin-bottom: 10px;
+}
+
+input[type="text"]:hover {
+    border: 1px solid #00b4d8;
+    transition: 0.5s;
+}
+
+button {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: black;
+    font-size: 16px;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #00b4d8;
+    color: white;
+}
+
+.character-container {
+    padding: 20px;
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+li {
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+li:hover {
+    background-color: #555555;
+    color: whitesmoke;
+}
+
+.character-card {
+    text-align: center;
+}
+
+.character-card img {
+    width: 120px;
+    height: 120px;
+}
+
+.alive {
+    background-color: #45D619;
+}
+
+.dead {
+    background-color: #ce122f;
+}
+
+.unknown {
+    background-color: #d5d5d5;
+}

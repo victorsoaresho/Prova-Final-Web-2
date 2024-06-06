@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rick and Morty - API</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="Imagens/ricky-and-Morty-live-wallpaper.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div id="app">
+        <div class="welcome-container">
+            <h1 class="rick-and-morty-font">Bem vindo à API do Rick and Morty!</h1>
+            <p>Pesquise um personagem da série:</p>
+            <input type="text" v-model="searchText" placeholder="Informe o nome do personagem">
+            <button @click="fetchCharacters">Buscar Personagens</button>
+        </div>
+        <div class="character-container">
+            <ul>
+                <li v-for="character in filteredCharacters" :key="character.id" :class="getStatusClass(character.status)">
+                    <div class="character-card">
+                        <img :src="character.image" alt="">
+                        <p>{{character.name}}</p>
+                        <div v-if="character.showDetails" class="details">
+                            <p>Status: {{character.status}}</p>
+                            <p>Species: {{character.species}}</p>
+                            <p>Gender: {{character.gender}}</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+<script src="index.js"></script>
+</body>
+</html>
